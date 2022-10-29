@@ -6,7 +6,7 @@
 /*   By: ebelkhei <ebelkhei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 09:17:16 by ebelkhei          #+#    #+#             */
-/*   Updated: 2022/10/25 22:14:20 by ebelkhei         ###   ########.fr       */
+/*   Updated: 2022/10/27 09:09:10 by ebelkhei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,13 @@ static int	ft_printhexa(int *remainders, int tall)
 	int		len;
 	hexa = "0123456789abcdef";
 	tall--;
-	write (1, "0x", 2);
-	len = 2;
+	len = write (1, "0x", 2);
 	while (tall >= 0)
 	{
 		idx = remainders[tall--];
-		write (1, hexa + idx, 1);
-		len++;
+		len += write (1, hexa + idx, 1);
 	}
+	free(remainders);
 	return (len);
 }
 

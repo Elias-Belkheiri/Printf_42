@@ -6,7 +6,7 @@
 /*   By: ebelkhei <ebelkhei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 08:23:48 by ebelkhei          #+#    #+#             */
-/*   Updated: 2022/10/26 09:51:53 by ebelkhei         ###   ########.fr       */
+/*   Updated: 2022/10/29 14:02:32 by ebelkhei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ static int  ft_check_format_specifie(const char *format, va_list args, int i)
 	else if (format[i] == 's')
         len += ft_putstr(va_arg(args, char *));
     else if (format[i] == 'i' || format[i] == 'd')
-            ft_putnbr(va_arg(args, int));
+        len += ft_putnbr(va_arg(args, int));
     else if (format[i] == 'u')
-        ft_putunbr(va_arg(args, int));
+        len += ft_putunbr(va_arg(args, int));
     else if (format[i] == 'x')
         len += ft_puthexa(va_arg(args, unsigned int), 'x');
     else if (format[i] == 'X')
@@ -71,13 +71,7 @@ int ft_printf(const char *format, ...)
 
 int main()
 {
-//      char a = 'a';
-// //     //printf("Hey %% %s", 'b', "Wfeen azine hh");
-// //     //printf("%d \n", &a);
-// //     //ft_printf("%d \n", &a);
-// //     //ft_printf("%x \n", &a);
-//     //printf("|%d|  ", printf("%X\n", 16));
-    ft_printf(NULL);
-    //printf(NULL);
-// //     //printf("Address:%5c\n", a);
+    // printf("t % 05d t\n", 55);
+    // printf("t %05d t\n", 55);
+    system("date");
 }
